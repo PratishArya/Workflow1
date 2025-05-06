@@ -8,9 +8,9 @@ jobs:
         steps: 
           - name: setup
             run: |
-                print date
-                print pwd
-                print ls -a
+                date
+                pwd
+                ls
     job2:
         name: job2
         runs-on: ubuntu_latest
@@ -26,4 +26,4 @@ jobs:
             run: |
                touch artifact.py
                echo "# This is my python artifact" > artifact.py 
-               pyhton3.9 artifact.py
+               pyhton artifact.py
