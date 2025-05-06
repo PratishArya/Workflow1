@@ -7,7 +7,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: step1
-          run: echo "Hello from job1" | date
+          run: | 
+            echo "Hello from job1" 
+            date
                 
     job2:
         name: job2
