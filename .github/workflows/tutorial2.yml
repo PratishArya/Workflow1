@@ -8,9 +8,9 @@ jobs:
         steps: 
           - name: setup
             run: |
-                echo date
-                pwd
-                ls -a
+                print date
+                print pwd
+                print ls -a
     job2:
         name: job2
         runs-on: ubuntu_latest
