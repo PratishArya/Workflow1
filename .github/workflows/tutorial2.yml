@@ -13,7 +13,7 @@ jobs:
                 ls -a
     job2:
         name: job2
-        runs_on: ubuntu_latest
+        runs-on: ubuntu_latest
         steps:
           - name: setup python
             uses: actions/setup-python@v4
