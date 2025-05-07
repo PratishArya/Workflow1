@@ -1,0 +1,31 @@
+name: tutorial2
+on: workflow_dispatch
+
+jobs:
+    job1:
+        name: job1
+        runs-on: ubuntu-latest
+        steps: 
+          - name: setup
+            run: |
+                date
+                pwd
+                ls -a
+    job2:
+        name: job2
+        runs-on: ubuntu-latest
+        steps:
+          - name: setup python
+            uses: actions/setup-python@v4
+            with: 
+              python-version: 3.9
+          - name: check version of python
+            run: python --version
+          - name: set up pandas
+            run: pip3 install pandas
+          - name: create artefact
+            run: |
+               touch artifact.py
+               echo "# This is my python artifact" > artifact.py 
+               echo "print('Hello World!')" >> artifact.py
+               python artifact.py
