@@ -13,13 +13,17 @@ jobs:
                 ls -a
     job2:
         name: job2
-        runs-on: ubuntu_latest
+        runs-on: ubuntu-latest
         steps:
           - name: setup python
             uses: actions/setup-python@v4
             with: 
               python-version: 3.9
-            
+            run: python --version
           - name: set up pandas
             run: pip3 install pandas
-          
+          - name: create artefact
+            run: |
+               touch artifact.py
+               echo "# This is my python artifact" > artifact.py 
+               python artifact.py
