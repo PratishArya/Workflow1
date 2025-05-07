@@ -10,7 +10,7 @@ jobs:
             run: |
                 date
                 pwd
-                ls
+                ls -a
     job2:
         name: job2
         runs-on: ubuntu_latest
@@ -22,8 +22,4 @@ jobs:
             
           - name: set up pandas
             run: pip3 install pandas
-          - name: create artefact
-            run: |
-               touch artifact.py
-               echo "# This is my python artifact" > artifact.py 
-               pyhton artifact.py
+          
